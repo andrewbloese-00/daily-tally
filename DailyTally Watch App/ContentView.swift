@@ -6,19 +6,52 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct ContentView: View {
+    
+    @State var showCreate = false
+    @State var viewingDate = Date()
+    @Query(sort:\DailyCounter.name) var counters:[DailyCounter]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                if(!counters.isEmpty){
+                    ForEach(counters, content: {
+                        DailyCounterView(counter: $0)
+                    })
+                } else {
+                    Text("No Counters Created")
+                }
+                
+            }
+            .toolbar {
+                ToolbarItem {
+                    Button(
+                        action: {
+                            showCreate.toggle()
+                        },
+                        label: {
+                            Label("New Counter", systemImage: "plus")
+                                .foregroundColor(.blue)
+                        }
+                    )
+                }
+            }
+            .sheet(isPresented: $showCreate, content: {
+                NavigationStack {
+                    CreateCategoryView()
+                }
+                .presentationDetents([.large])
+            })
+            
         }
-        .padding()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().modelContainer(for: [DailyCounter.self])
 }

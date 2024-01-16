@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA396262B534A6B004893BD /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396252B534A6B004893BD /* Tally.swift */; };
+		ACA396282B53B31B004893BD /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396272B53B31B004893BD /* Counter.swift */; };
+		ACA3962A2B53BBED004893BD /* DailyCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396292B53BBED004893BD /* DailyCounterView.swift */; };
 		ACA5749F2B5349AA00DAF135 /* DailyTally Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = ACA5749E2B5349AA00DAF135 /* DailyTally Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACA574A42B5349AA00DAF135 /* DailyTallyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA574A32B5349AA00DAF135 /* DailyTallyApp.swift */; };
 		ACA574A62B5349AA00DAF135 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA574A52B5349AA00DAF135 /* ContentView.swift */; };
 		ACA574A82B5349AB00DAF135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA574A72B5349AB00DAF135 /* Assets.xcassets */; };
 		ACA574AB2B5349AB00DAF135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA574AA2B5349AB00DAF135 /* Preview Assets.xcassets */; };
+		ACFE07CA2B549C0E00C57BD2 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE07C92B549C0E00C57BD2 /* CreateCategoryView.swift */; };
+		ACFE07CC2B55AC4200C57BD2 /* DialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE07CB2B55AC4200C57BD2 /* DialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +44,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACA396252B534A6B004893BD /* Tally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tally.swift; sourceTree = "<group>"; };
+		ACA396272B53B31B004893BD /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		ACA396292B53BBED004893BD /* DailyCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCounterView.swift; sourceTree = "<group>"; };
 		ACA574982B5349AA00DAF135 /* DailyTally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA5749E2B5349AA00DAF135 /* DailyTally Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyTally Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA574A32B5349AA00DAF135 /* DailyTallyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTallyApp.swift; sourceTree = "<group>"; };
 		ACA574A52B5349AA00DAF135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACA574A72B5349AB00DAF135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA574AA2B5349AB00DAF135 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACFE07C92B549C0E00C57BD2 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		ACFE07CB2B55AC4200C57BD2 /* DialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,11 @@
 		ACA574912B5349AA00DAF135 = {
 			isa = PBXGroup;
 			children = (
+				ACFE07CB2B55AC4200C57BD2 /* DialView.swift */,
+				ACFE07C92B549C0E00C57BD2 /* CreateCategoryView.swift */,
+				ACA396292B53BBED004893BD /* DailyCounterView.swift */,
+				ACA396272B53B31B004893BD /* Counter.swift */,
+				ACA396252B534A6B004893BD /* Tally.swift */,
 				ACA574A22B5349AA00DAF135 /* DailyTally Watch App */,
 				ACA574992B5349AA00DAF135 /* Products */,
 			);
@@ -192,8 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFE07CA2B549C0E00C57BD2 /* CreateCategoryView.swift in Sources */,
+				ACA396282B53B31B004893BD /* Counter.swift in Sources */,
+				ACA3962A2B53BBED004893BD /* DailyCounterView.swift in Sources */,
 				ACA574A62B5349AA00DAF135 /* ContentView.swift in Sources */,
 				ACA574A42B5349AA00DAF135 /* DailyTallyApp.swift in Sources */,
+				ACA396262B534A6B004893BD /* Tally.swift in Sources */,
+				ACFE07CC2B55AC4200C57BD2 /* DialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
