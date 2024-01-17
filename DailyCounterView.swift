@@ -11,8 +11,8 @@ import SwiftUI
 let colors:[Color] = [ Color.red , Color.blue, Color.green, Color.purple, Color.yellow ]
 
 struct DailyCounterView: View {
-    
-    var counter:DailyCounter
+    @Environment(\.modelContext) var context
+    @State var counter:DailyCounter
     var viewDate:Date = Date()
     
     var body: some View {
@@ -28,7 +28,20 @@ struct DailyCounterView: View {
                     Text("\(counter.tallies(on: viewDate).count)")
                 }
             })
-        })
+        }).swipeActions {
+            Button(
+                role: .destructive,
+                action: {
+                    withAnimation{
+                        context.delete(counter)
+                    }
+                },
+                label: {
+                    Label("Delete", systemImage: "trash")
+                        .symbolVariant(.fill)
+                }
+            )//end del button
+        }
         
         
     }

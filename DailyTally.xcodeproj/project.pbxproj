@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC717A5E2B58928C006EB89B /* CounterHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC717A5D2B58928C006EB89B /* CounterHistoryView.swift */; };
 		ACA396262B534A6B004893BD /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396252B534A6B004893BD /* Tally.swift */; };
 		ACA396282B53B31B004893BD /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396272B53B31B004893BD /* Counter.swift */; };
 		ACA3962A2B53BBED004893BD /* DailyCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA396292B53BBED004893BD /* DailyCounterView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC717A5D2B58928C006EB89B /* CounterHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHistoryView.swift; sourceTree = "<group>"; };
 		ACA396252B534A6B004893BD /* Tally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tally.swift; sourceTree = "<group>"; };
 		ACA396272B53B31B004893BD /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		ACA396292B53BBED004893BD /* DailyCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCounterView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		ACA574912B5349AA00DAF135 = {
 			isa = PBXGroup;
 			children = (
+				AC717A5D2B58928C006EB89B /* CounterHistoryView.swift */,
 				ACFE07CB2B55AC4200C57BD2 /* DialView.swift */,
 				ACFE07C92B549C0E00C57BD2 /* CreateCategoryView.swift */,
 				ACA396292B53BBED004893BD /* DailyCounterView.swift */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC717A5E2B58928C006EB89B /* CounterHistoryView.swift in Sources */,
 				ACFE07CA2B549C0E00C57BD2 /* CreateCategoryView.swift in Sources */,
 				ACA396282B53B31B004893BD /* Counter.swift in Sources */,
 				ACA3962A2B53BBED004893BD /* DailyCounterView.swift in Sources */,

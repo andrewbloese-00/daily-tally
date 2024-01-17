@@ -11,10 +11,12 @@ import SwiftData
 
 struct ContentView: View {
     
+    @Environment(\.modelContext) var context
     @State var showCreate = false
     @State var viewingDate = Date()
     @Query(sort:\DailyCounter.name) var counters:[DailyCounter]
-    
+
+
     var body: some View {
         NavigationStack {
             List {
