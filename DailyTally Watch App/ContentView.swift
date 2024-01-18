@@ -14,7 +14,7 @@ struct ContentView: View {
     @Environment(\.modelContext) var context
     @State var showCreate = false
     @State var viewingDate = Date()
-    @Query(sort:\DailyCounter.name) var counters:[DailyCounter]
+    @Query(sort:\DailyCounter.last_interacted, order: .reverse) var counters:[DailyCounter]
 
 
     var body: some View {

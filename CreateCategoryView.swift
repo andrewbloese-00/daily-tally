@@ -62,5 +62,4 @@ struct CreateCategoryView: View {
 
 #Preview {
     CreateCategoryView()
-        .modelContainer(for:DailyCounter.self)
 }

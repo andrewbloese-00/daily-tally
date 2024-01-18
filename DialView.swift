@@ -11,11 +11,12 @@ let PM_WIDTH = 300.0
 let AM_WIDTH = 90.0
 
 struct DialView: View {
+    @Environment(\.modelContext) var context
     @State var counter:DailyCounter
     var body: some View {
         NavigationView{
             VStack {
-                Text("\(counter.name) Today")
+//                Text("\(counter.name) Today")
                 ZStack{
                     //PM Dial Track
                     Circle()
@@ -34,18 +35,18 @@ struct DialView: View {
                         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                     
                     //counter button
-                    //                Circle()
-                    //                    .fill(colors[counter.color])
-                    //                    .frame(width: 30)
-                    
                     Button(
                         action: {
+                            
+            
                             withAnimation{
-                                counter.tallies.append(Tally(timestamp: Date()))
+                                let now = Date()
+                                counter.tallies.append(Tally(timestamp: now))
+                                counter.last_interacted = now
                             }
                         },
                         label: {
-                            Text("\(counter.tallies(on: Date()).count)")
+                            Text("\(counter.numTallies(on: Date()))")
                                 .frame(width: 30,height: 30)
                                 .background(colors[counter.color])
                                 .clipShape(Circle())
