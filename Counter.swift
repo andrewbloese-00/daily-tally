@@ -38,14 +38,26 @@ class DailyCounter{
         return self.tallies(on: on).count;
     }
     
-    
- 
-    
-    
-    
-    
-    
-    
+    //generate data that conforms to Swift Charts formatting for the CounterHistory view
+    //gets the number of tallies on each day in the date interval [from,to]
+    func getChartDayData(from:Date,to:Date)->[ViewTallies]{
+        //store the date and number tallies for each day in the range 'from' to 'to'
+        var ans:[ViewTallies] = []
+        var curr:Date = from
+        var attempts = 0
+        let cal = Calendar.current
+        //while within the date range, the user can look at at most 1 year of days at a time
+        while curr <= to && attempts < 365 {
+            //create a datapoint for the tallies on the day and add to our dataset
+            ans.append(ViewTallies(
+                timestamp: curr,
+                tallyCount: self.numTallies(on: curr)
+            ))
+            curr = cal.date(byAdding: .day, value: 1, to: curr) ?? curr
+            attempts+=1
+        }
+        return ans
+    }
 }
      
 

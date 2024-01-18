@@ -7,11 +7,12 @@
 
 import SwiftUI
 import SwiftData
-
+import Charts
 struct CounterHistoryView: View {
     @State var counter:DailyCounter
     @Environment(\.modelContext) var context
     var body: some View {
+        
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
@@ -21,3 +22,13 @@ struct CounterHistoryView: View {
     return CounterHistoryView(counter:previewCounter)
         .modelContainer(for:[DailyCounter.self])
 }
+
+
+
+//func getWeekStart(from:Date)->Date{
+//    
+//}
+//
+//func getWeekend(from:Date)->Date {
+//    
+//}
