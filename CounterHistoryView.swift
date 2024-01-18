@@ -9,11 +9,36 @@ import SwiftUI
 import SwiftData
 import Charts
 struct CounterHistoryView: View {
+    
+    //TODO: Initialize state to start / end of current week
+    @State var chartStart = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: Date()) ?? Date()
+    @State var chartEnd = Date()
     @State var counter:DailyCounter
     @Environment(\.modelContext) var context
     var body: some View {
+        NavigationView {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("\(counter.name)")
+                    .font(.title)
+                    .foregroundColor(colors[counter.color])
+
+                Chart {
+                    ForEach(counter.getChartDayData(
+                        from: chartStart,
+                            to: chartEnd)
+                    ){
+                        BarMark(
+                            x: .value("Date",$0.date),
+                            y: .value("\(counter.name)", $0.tallyCount)
+                        )
+                    }
+                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+            }
+        }
         
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        
     }
 }
 

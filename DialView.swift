@@ -79,7 +79,7 @@ struct DialView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing){
-                NavigationLink(destination: {}) {
+                NavigationLink(destination: CounterHistoryView(counter:counter)) {
                     Label("History",systemImage: "calendar")
                 }
             }
